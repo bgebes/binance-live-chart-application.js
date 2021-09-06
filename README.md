@@ -1,3 +1,5 @@
+![Demo Photo](https://github.com/bgebes/binance-live-chart-application-js/blob/gh-pages/demo.jpg)
+
 # How can we run with another trades? 
 
 First of them, you should view the [script.js](https://github.com/bgebes/binance-live-chart-application-js/blob/gh-pages/script.js#L2). And you can change the variable about trades.
