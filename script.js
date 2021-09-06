@@ -41,7 +41,7 @@ async function getCoinInfo(url) {
     response = await fetch(url);
     data = await response.json();
   } catch (error) {
-    alert("Coin bilgisi bulunurken hata ile karşılaşıldı. Hata 'coinTradeSymbol' değişkeni ile ilgilidir.");
+    alert("A error detected while getting coin data. Error about 'coinTradeSymbol' variable.");
   }
 
   if (response) {
@@ -102,7 +102,7 @@ async function getCurrencyPrice(url) {
       response = await fetch(url);
       data = await response.json();
     } catch (error) {
-      alert("Birim bilgisi bulunurken hata ile karşılaşıldı. Hata 'coinTradeSymbol' ve 'unit' değişkenleri ile ilgilidir.");
+      alert("A error detected while getting unit data. Error about 'coinTradeSymbol' ve 'unit' variables.");
     }
 
     if (response) {
@@ -131,7 +131,7 @@ async function getCoinName(url) {
     response = await fetch(url);
     body = await response.json();
   } catch (error) {
-    alert("Coin adı bulunurken hata ile karşılaşıldı. Hata API ile ilgilidir.");
+    alert("A error detected. Error about API.");
   }
 
   if (response) {
@@ -173,11 +173,11 @@ function fillTheData() {
   text_change24hrPercent.textContent = `${coinInfo.change24hrPercent}%`;
   text_highPrice.textContent = coinInfo.highPrice24hr;
   text_lowPrice.textContent = coinInfo.lowPrice24hr;
-  title_volume24hrWithlot.textContent = `24S Hacim(${coinInfo.coinSymbol})`;
+  title_volume24hrWithlot.textContent = `24H Volume(${coinInfo.coinSymbol})`;
   text_volume24hrWithlot.textContent = coinInfo.volumeWithLot24hr;
-  title_volume24hrWithCurrency.textContent = `24S Hacim(${coinInfo.currency})`;
+  title_volume24hrWithCurrency.textContent = `24H Volume(${coinInfo.currency})`;
   text_volume24hrWithCurrency.textContent = coinInfo.volumeWithCurrency24hr;
   descriptionArticle.style.fontSize = "20px";
-  descriptionArticle.innerHTML = `<span id="descriptionArticle">${coinInfo.coinSymbol} coin bugünkü fiyatı: <span style="color: red">${coinInfo.lastPriceWithUnit} ${unitCharacter},</span> 24 Saatlik değişim
-  <span style="color: red">${coinInfo.change24hrPercent}%,</span> 24 Saat işlem hacmi <span style="color: red">${coinInfo.volumeWithCurrency24hr} ${coinInfo.currency}</span> olarak belirlendi.</span>`;
+  descriptionArticle.innerHTML = `<span id="descriptionArticle">${coinInfo.coinSymbol} coin today price: <span style="color: red">${coinInfo.lastPriceWithUnit} ${unitCharacter},</span> 24 hour change
+  <span style="color: red">${coinInfo.change24hrPercent}%,</span> 24 hour volume <span style="color: red">${coinInfo.volumeWithCurrency24hr} ${coinInfo.currency}</span></span>`;
 }
