@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Getter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body id="main">
+  <div class="row" style="background-color: #161a1e; width: 70%;">
+    <div class="col-sm-2 border border-left-0 border-top-0 border-bottom-0">
+      <span class="text-white" id="coinSymbol">ADA/BNB</span>
+      <br>
+      <span id="coinDesc">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="iconLeave text-secondary" width="1em" height="1em">
+          <path d="M15.11 5.63L6 6.89 15.11 4v1.63zM17.61 6.89v11.2h-1.25V8.33L6 6.89h11.61z" fill="currentColor">
+          </path>
+          <path d="M6 6.89v11.16l.1.01.07.01.17.03h-.27l9.04 2.86V9.77L6 6.89zm3.4 3.2l1.87.6v1.84l-1.87-.59v-1.85zm1.87 7.66l-1.87-.59.03-3.85 1.88.59-.04 3.85z" fill="currentColor"></path>
+        </svg>
+        <span class="text-secondary small" id="coinName">Cardano</span>
+      </span>
+    </div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col">
+          <span class="text-white" id="coinLastPrice">0.00</span>
+          <br>
+          <span class="text-white" id="coinLastPriceWithUnit">0.00 TL</span>
+        </div>
+        <div class="col">
+          <span class="text-secondary small">24 Saatlik Değişim</span>
+          <span class="row">
+            <span class='col small text-white' id='change24hrWithlot'>0.00 $</span>
+            <span class='col small text-white' id='change24hrWithpercent'>0.00%</span>
+          </span>
+        </div>
+        <div class="col">
+          <span class="text-secondary small">24S En Yüksek</span>
+          <br>
+          <span class="text-white small" id="highPrice24hr">0.00</span>
+        </div>
+        <div class="col">
+          <span class="text-secondary small">24S En Düşük</span>
+          <br>
+          <span class="text-white small" id="lowPrice24hr">0.00</span>
+        </div>
+        <div class="col">
+          <span class="text-secondary small" id="volume24hrWithlotTitle">24S Hacim(ADA)</span>
+          <br>
+          <span class="text-white small" id="volume24hrWithlot">0.00</span>
+        </div>
+        <div class="col">
+          <span class="text-secondary small" id="volume24hrWithCurrencyTitle">24S Hacim(BNB)</span>
+          <br>
+          <span class="text-white small" id="volume24hrWithCurrency">0.00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <span id="descriptionArticle"></span>
+</body>
+
+</html>
